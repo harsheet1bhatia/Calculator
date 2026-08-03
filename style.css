@@ -486,10 +486,15 @@ transform:translateX(-50%);
 }
 
 .material-symbols-outlined{
-font-size:24px;
+font-family:'Material Symbols Outlined';
+font-size:26px;
+font-weight:normal;
+font-style:normal;
+line-height:1;
 display:block;
-margin-bottom:3px;
+margin-bottom:4px;
 }
+
 
 .nav-btn{
 display:flex;
@@ -502,4 +507,14 @@ gap:2px;
 .nav-btn span:last-child{
 font-size:12px;
 font-weight:600;
+}
+
+input[type="date"]{
+width:100%;
+max-width:100%;
+box-sizing:border-box;
+}
+
+.card{
+overflow:hidden;
 }
