@@ -45,9 +45,9 @@ await signInWithPopup(auth, provider);
 
 } catch (e) {
 
-alert("Login Failed");
+console.error(e);
 
-console.log(e);
+alert(e.code + "\n\n" + e.message);
 
 }
 
