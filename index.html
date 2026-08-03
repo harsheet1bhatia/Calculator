@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Master Calculator</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <h1>Master Calculator</h1>
+
+        <p>Built by <span>Harsheet</span></p>
+
+    </header>
+
+    <!-- Main Container -->
+
+    <div class="pages">
+
+        <!-- ========================= -->
+        <!-- PAYMENT CALCULATOR -->
+        <!-- ========================= -->
+
+        <section class="page active" id="paymentPage">
+
+            <div class="card">
+
+                <h2>Payment Calculator</h2>
+
+                <div class="form-group">
+
+                    <label>Rent</label>
+
+                    <input
+                        type="number"
+                        id="rent"
+                        placeholder="Enter Rent">
+
+                    <small id="rentError"></small>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>How Many People Stay?</label>
+
+                    <select id="people">
+
+                        <option value="">Select</option>
+
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+
+                    </select>
+
+                    <small id="peopleError"></small>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Token</label>
+
+                    <input
+                        type="number"
+                        id="token"
+                        placeholder="Enter Token">
+
+                    <small id="tokenError"></small>
+
+                </div>
+
+                <div class="button-group">
+
+                    <button id="calculateBtn">
+                        Calculate
+                    </button>
+
+                    <button id="resetBtn">
+                        Reset
+                    </button>
+
+                </div>
+
+                <div class="results">
+
+                    <div class="result-box">
+
+                        <span>Online</span>
+
+                        <strong id="onlineResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="result-box">
+
+                        <span>Cash</span>
+
+                        <strong id="cashResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                    <div class="result-box">
+
+                        <span>Brokerage</span>
+
+                        <strong id="brokerageResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ========================= -->
+        <!-- BROKERAGE CALCULATOR -->
+        <!-- ========================= -->
+
+        <section class="page" id="brokeragePage">
+
+            <div class="card">
+
+                <h2>Brokerage Calculator</h2>
+
+                <div class="form-group">
+
+                    <label>Rent</label>
+
+                    <input
+                        type="number"
+                        id="brokerageRent"
+                        placeholder="Enter Rent">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Enter Number of Days</label>
+
+                    <input
+                        type="number"
+                        id="brokerageDays"
+                        placeholder="Enter Days">
+
+                </div>
+
+                <div class="button-group">
+
+                    <button id="brokerageCalculateBtn">
+                        Calculate
+                    </button>
+
+                    <button id="brokerageResetBtn">
+                        Reset
+                    </button>
+
+                </div>
+
+                <div class="results">
+
+                    <div class="result-box">
+
+                        <span>Brokerage</span>
+
+                        <strong id="brokerageOnlyResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- RENT CALCULATOR -->
+        <!-- ========================= -->
+
+        <section class="page" id="rentPage">
+
+            <div class="card">
+
+                <h2>Rent Calculator</h2>
+
+                <div class="form-group">
+
+                    <label>Monthly Rent</label>
+
+                    <input
+                        type="number"
+                        id="monthlyRent"
+                        placeholder="Enter Rent">
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>Select Date</label>
+
+                    <input
+                        type="date"
+                        id="joiningDate">
+
+                </div>
+
+                <div class="button-group">
+
+                    <button id="rentCalculateBtn">
+                        Calculate
+                    </button>
+
+                    <button id="rentResetBtn">
+                        Reset
+                    </button>
+
+                </div>
+
+                <div class="results">
+
+                    <div class="result-box">
+
+                        <span>Remaining Rent</span>
+
+                        <strong id="rentResult">
+                            ₹0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Bottom Navigation -->
+
+    <nav class="bottom-nav">
+
+        <button class="nav-item" data-page="rentPage">
+
+            Rent
+
+        </button>
+
+        <button class="nav-item active" data-page="paymentPage">
+
+            Payment
+
+        </button>
+
+        <button class="nav-item" data-page="brokeragePage">
+
+            Brokerage
+
+        </button>
+
+    </nav>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
