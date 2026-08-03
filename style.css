@@ -14,257 +14,190 @@ margin:0;
 padding:20px;
 }
 
-
 .page{
-
 display:none;
-
 width:100%;
-
 animation:fade .3s ease;
-
 }
 
 .page.active{
-
 display:block;
-
 }
 
 .container{
-
 width:100%;
-
 max-width:430px;
-
 margin:auto;
-
 padding-bottom:100px;
-
 }
 
 .card{
-
 background:#fff;
-
 border-radius:20px;
-
 padding:25px;
-
 box-shadow:0 15px 35px rgba(0,0,0,.12);
-
+overflow:hidden;
+animation:cardFade .35s ease;
 }
 
 h1{
-
 text-align:center;
-
 color:#198754;
-
 margin-bottom:10px;
-
+font-size:34px;
+font-weight:700;
 }
 
 .built-by{
-
 text-align:right;
-
 font-size:13px;
-
 color:#666;
-
 margin-bottom:20px;
-
 }
 
 .built-by span{
-
 color:#198754;
-
 font-weight:600;
-
 }
 
 .form-group{
-
 margin-bottom:16px;
-
+width:100%;
+overflow:hidden;
 }
 
 label{
-
 display:block;
-
 font-weight:600;
-
 margin-bottom:6px;
-
 }
 
 input,
 select{
 width:100%;
-max-width:100%;
 padding:13px;
 border:2px solid #ddd;
 border-radius:12px;
 font-size:15px;
+background:#fff;
 outline:none;
 transition:.3s;
 box-sizing:border-box;
 }
 
-
 input[type="date"]{
 width:100%;
-max-width:100%;
-display:block;
-appearance:none;
--webkit-appearance:none;
+padding:13px;
+border:2px solid #ddd;
+border-radius:12px;
+background:#fff;
+color:#333;
+font-size:15px;
+box-sizing:border-box;
+-webkit-appearance:auto;
+appearance:auto;
 }
-
-.form-group{
-width:100%;
-overflow:hidden;
-}
-
-
 
 input:focus,
 select:focus{
-
 border-color:#198754;
-
 }
 
 .error{
-
 display:block;
-
 color:#dc3545;
-
 font-size:12px;
-
 margin-top:4px;
-
 }
 
 button{
-
 width:100%;
-
 padding:14px;
-
 border:none;
-
 border-radius:12px;
-
 font-weight:600;
-
+font-size:16px;
 cursor:pointer;
-
 margin-top:12px;
+transition:.25s ease;
+}
 
-transition:.3s;
+button:hover{
+transform:translateY(-2px);
+}
 
+button:active{
+transform:scale(.97);
 }
 
 .calculate-btn{
-
 background:#198754;
-
 color:#fff;
-
 }
 
 .calculate-btn:hover{
-
 background:#157347;
-
 }
 
 .reset-btn{
-
 background:#ffc107;
-
 color:#222;
-
 }
 
 .reset-btn:hover{
-
 background:#e0aa00;
-
 }
 
 .copy-btn{
-
 background:#0d6efd;
-
 color:#fff;
-
 }
 
 .copy-btn:hover{
-
 background:#0b5ed7;
-
 }
 
 .results{
-
 display:none;
-
 margin-top:20px;
-
 }
 
 .result-card{
-
 display:flex;
-
 justify-content:space-between;
-
 align-items:center;
-
 padding:15px;
-
-background:#f4fff7;
-
-border-left:5px solid #198754;
-
-border-radius:12px;
-
 margin-top:14px;
-
+background:#f4fff7;
+border-left:5px solid #198754;
+border-radius:12px;
 }
 
 .result-card strong{
-
 color:#198754;
-
 font-size:20px;
-
 }
 
 @keyframes fade{
-
 from{
-
 opacity:0;
-
 transform:translateY(15px);
-
 }
-
 to{
-
 opacity:1;
-
 transform:translateY(0);
-
+}
 }
 
+@keyframes cardFade{
+from{
+opacity:0;
+transform:translateY(20px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
 }
 
 /* ==========================
@@ -279,7 +212,7 @@ transform:translateX(-50%);
 width:calc(100% - 30px);
 max-width:430px;
 height:72px;
-background:#ffffff;
+background:#fff;
 border-radius:20px;
 display:flex;
 justify-content:space-around;
@@ -289,210 +222,39 @@ z-index:999;
 }
 
 .nav-btn{
-
 flex:1;
 height:100%;
 border:none;
 background:none;
 cursor:pointer;
-font-size:15px;
-font-weight:600;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+gap:3px;
 color:#666;
-transition:.3s;
-border-radius:20px;
-
+font-size:12px;
+font-weight:600;
+margin:0;
+padding:0;
 }
 
 .nav-btn:hover{
-
 color:#198754;
-
+transform:none;
 }
 
 .nav-btn.active{
-
 color:#198754;
-font-weight:700;
-
 }
 
 .nav-btn.active::after{
-
 content:"";
-display:block;
-width:32px;
+width:30px;
 height:4px;
 background:#198754;
-border-radius:30px;
-margin:6px auto 0;
-
-}
-
-
-/* ==========================
-   Button Animation
-========================== */
-
-button{
-
-transition:.25s ease;
-
-}
-
-button:hover{
-
-transform:translateY(-2px);
-
-}
-
-button:active{
-
-transform:scale(.96);
-
-}
-
-
-/* ==========================
-   Card Animation
-========================== */
-
-.card{
-
-animation:cardFade .35s ease;
-
-}
-
-@keyframes cardFade{
-
-from{
-
-opacity:0;
-transform:translateY(20px);
-
-}
-
-to{
-
-opacity:1;
-transform:translateY(0);
-
-}
-
-}
-
-
-/* ==========================
-   Responsive
-========================== */
-
-@media(max-width:480px){
-
-body{
-
-padding:15px;
-
-}
-
-.container{
-
-max-width:100%;
-
-}
-
-.card{
-
-padding:18px;
-
-border-radius:18px;
-
-}
-
-h1{
-
-font-size:24px;
-
-}
-
-button{
-
-padding:13px;
-
-font-size:15px;
-
-}
-
-.result-card{
-
-padding:13px;
-
-}
-
-.result-card strong{
-
-font-size:18px;
-
-}
-
-.bottom-nav{
-
-width:calc(100% - 20px);
-bottom:10px;
-height:68px;
-
-}
-
-.nav-btn{
-
-font-size:14px;
-
-}
-
-}
-
-
-/* ==========================
-   Desktop
-========================== */
-
-@media(min-width:768px){
-
-.container{
-
-max-width:430px;
-
-}
-
-.bottom-nav{
-
-max-width:430px;
-
-}
-
-}
-
-
-/* Mobile Fix */
-
-@media (max-width:768px){
-
-.page{
-width:100%;
-}
-
-.container{
-max-width:100%;
-}
-
-.card{
-width:100%;
-}
-
-.bottom-nav{
-width:calc(100% - 20px);
-left:50%;
-transform:translateX(-50%);
-}
-
+border-radius:20px;
+margin-top:4px;
 }
 
 .material-symbols-outlined{
@@ -502,29 +264,89 @@ font-weight:normal;
 font-style:normal;
 line-height:1;
 display:block;
-margin-bottom:4px;
 }
 
+/* ==========================
+   Mobile
+========================== */
 
-.nav-btn{
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-gap:2px;
+@media (max-width:768px){
+
+body{
+padding:15px;
 }
 
-.nav-btn span:last-child{
-font-size:12px;
-font-weight:600;
-}
-
-input[type="date"]{
-width:100%;
+.container{
 max-width:100%;
-box-sizing:border-box;
 }
 
 .card{
-overflow:hidden;
+padding:18px;
+border-radius:18px;
+}
+
+h1{
+font-size:26px;
+}
+
+button{
+padding:13px;
+font-size:15px;
+}
+
+.result-card{
+padding:13px;
+}
+
+.result-card strong{
+font-size:18px;
+}
+
+.bottom-nav{
+width:calc(100% - 20px);
+bottom:10px;
+height:68px;
+}
+
+.nav-btn{
+font-size:11px;
+}
+
+.material-symbols-outlined{
+font-size:24px;
+}
+
+}
+
+/* ==========================
+   Desktop
+========================== */
+
+@media (min-width:769px){
+
+.container{
+max-width:430px;
+}
+
+.bottom-nav{
+max-width:430px;
+}
+
+}
+
+/* ==========================
+   Date Fix
+========================== */
+
+input[type="date"]{
+width:100%;
+height:48px;
+padding:0 12px;
+border:2px solid #ddd;
+border-radius:12px;
+background:#fff;
+color:#333;
+box-sizing:border-box;
+-webkit-appearance:auto;
+appearance:auto;
 }
