@@ -24,7 +24,7 @@ const onlineResult = document.getElementById("onlineResult");
 const cashResult = document.getElementById("cashResult");
 const brokerageResult = document.getElementById("brokerageResult");
 
-const results = paymentPage.querySelector(".results");
+const results=document.querySelector("#paymentPage .results");
 
 // =============================
 // Default Page
@@ -176,7 +176,7 @@ const brokerageCopyBtn=document.getElementById("brokerageCopyBtn");
 
 const brokerageOnlyResult=document.getElementById("brokerageOnlyResult");
 
-const brokerageResults=brokeragePage.querySelector(".results");
+const brokerageResults=document.querySelector("#brokeragePage .results");
 
 brokerageCalculateBtn.addEventListener("click",()=>{
 
@@ -231,7 +231,7 @@ const rentResetBtn=document.getElementById("rentResetBtn");
 
 const rentResult=document.getElementById("rentResult");
 
-const rentResults=rentPage.querySelector(".results");
+const rentResults=document.querySelector("#rentPage .results");
 
 rentCalculateBtn.addEventListener("click",()=>{
 
