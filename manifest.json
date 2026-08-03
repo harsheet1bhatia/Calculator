@@ -1,0 +1,26 @@
+{
+  "name": "Master Calculator",
+  "short_name": "Calculator",
+  "description": "Master Dashboard for Payment, Brokerage and Rent Calculators",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4fff7",
+  "theme_color": "#198754",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
