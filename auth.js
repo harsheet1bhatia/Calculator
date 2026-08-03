@@ -70,7 +70,7 @@ const email = user.email.toLowerCase();
 
 try {
 
-const userRef = doc(db, "allowedUsers", email);
+const userRef = doc(db, "AllowedUsers", email);
 
 const snap = await getDoc(userRef);
 
