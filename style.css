@@ -123,6 +123,11 @@ appearance:none;
 -webkit-appearance:none;
 }
 
+.form-group{
+width:100%;
+overflow:hidden;
+}
+
 
 
 input:focus,
