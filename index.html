@@ -12,9 +12,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<script type="module" src="auth.js"></script>
+
 </head>
 
 <body>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" style="display:none;min-height:100vh;background:linear-gradient(135deg,#dff8ea,#bfe9cf);justify-content:center;align-items:center;flex-direction:column;">
+
+<div class="container">
+
+<div class="card" style="text-align:center;">
+
+<h1>Master Calculator</h1>
+
+<p style="margin:20px 0;color:#666;">
+Continue with your approved Google account
+</p>
+
+<button
+id="googleLoginBtn"
+class="calculate-btn">
+
+Continue with Google
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="app" style="display:none;">
 
 <!-- PAYMENT PAGE -->
 
@@ -302,6 +333,8 @@ Reset
 </div>
 
 <script src="script.js"></script>
+
+</div>
 
 </body>
 </html>
