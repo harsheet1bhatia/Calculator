@@ -114,7 +114,7 @@ cash=(rentValue+documentation)-20000;
 
 }
 
-const brokerage=rentValue;
+const brokerage=rentValue/2;
 
 onlineResult.innerText="₹"+online.toLocaleString();
 cashResult.innerText="₹"+cash.toLocaleString();
