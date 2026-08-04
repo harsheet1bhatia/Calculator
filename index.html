@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Master Calculator</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PAYMENT PAGE -->
+
+<div id="paymentPage" class="page active">
+
+<div class="container">
+
+<div class="card">
+
+<h1>🏠 Payment Calculator</h1>
+
+<p class="built-by">
+Built by <span>Harsheet</span> 💚
+</p>
+
+<div class="form-group">
+
+<label>Rent</label>
+
+<input
+type="number"
+id="rent"
+placeholder="Enter Rent">
+
+<small
+id="rentError"
+class="error"></small>
+
+</div>
+
+<div class="form-group">
+
+<label>How Many People Stay?</label>
+
+<select id="people">
+
+<option value="">Select</option>
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+<option>8</option>
+<option>9</option>
+<option>10</option>
+
+</select>
+
+<small
+id="peopleError"
+class="error"></small>
+
+</div>
+
+<div class="form-group">
+
+<label>Token</label>
+
+<input
+type="number"
+id="token"
+placeholder="Enter Token">
+
+<small
+id="tokenError"
+class="error"></small>
+
+</div>
+
+<button
+id="calculateBtn"
+class="calculate-btn">
+
+Calculate
+
+</button>
+
+<button
+id="resetBtn"
+class="reset-btn">
+
+Reset
+
+</button>
+
+<div class="results">
+
+<div class="result-card">
+
+<span>Online</span>
+
+<strong id="onlineResult">
+
+₹0
+
+</strong>
+
+</div>
+
+<div class="result-card">
+
+<span>Cash</span>
+
+<strong id="cashResult">
+
+₹0
+
+</strong>
+
+</div>
+
+<div class="result-card">
+
+<span>Brokerage</span>
+
+<strong id="brokerageResult">
+
+₹0
+
+</strong>
+
+</div>
+
+<button
+id="copyBtn"
+class="copy-btn">
+
+📋 Copy Result
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BROKERAGE PAGE -->
+
+<div id="brokeragePage" class="page">
+
+<div class="container">
+
+<div class="card">
+
+<h1>💰 Brokerage Calculator</h1>
+
+<p class="built-by">
+Built by <span>Harsheet</span> 💚
+</p>
+
+<div class="form-group">
+
+<label>Rent</label>
+
+<input type="number" id="brokerageRent" placeholder="Enter Rent">
+
+<small id="brokerageRentError" class="error"></small>
+
+</div>
+
+<div class="form-group">
+
+<label>Enter Number of Days</label>
+
+<input type="number" id="days" placeholder="Enter Days">
+
+<small id="daysError" class="error"></small>
+
+</div>
+
+<button id="brokerageCalculateBtn" class="calculate-btn">
+Calculate
+</button>
+
+<button id="brokerageResetBtn" class="reset-btn">
+Reset
+</button>
+
+<div class="results">
+
+<div class="result-card">
+
+<span>Brokerage</span>
+
+<strong id="brokerageOnlyResult">₹0</strong>
+
+</div>
+
+<button id="brokerageCopyBtn" class="copy-btn">
+
+📋 Copy Result
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- RENT PAGE -->
+
+<div id="rentPage" class="page">
+
+<div class="container">
+
+<div class="card">
+
+<h1>🏠 Rent Calculator</h1>
+
+<p class="built-by">
+Built by <span>Harsheet</span> 💚
+</p>
+
+<div class="form-group">
+
+<label>Rent</label>
+
+<input type="number" id="monthlyRent" placeholder="Enter Rent">
+
+</div>
+
+<div class="form-group">
+
+<label>Select Date</label>
+
+<input type="date" id="joiningDate">
+
+</div>
+
+<button id="rentCalculateBtn" class="calculate-btn">
+
+Calculate
+
+</button>
+
+<button id="rentResetBtn" class="reset-btn">
+
+Reset
+
+</button>
+
+<div class="results">
+
+<div class="result-card">
+
+<span>Remaining Rent</span>
+
+<strong id="rentResult">₹0</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div class="bottom-nav">
+
+<button class="nav-btn active" data-page="paymentPage">
+<span class="material-symbols-outlined">payments</span>
+<span>Payment</span>
+</button>
+
+<button class="nav-btn" data-page="brokeragePage">
+<span class="material-symbols-outlined">calculate</span>
+<span>Brokerage</span>
+</button>
+
+<button class="nav-btn" data-page="rentPage">
+<span class="material-symbols-outlined">home</span>
+<span>Rent</span>
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
